@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>FioTrack — Respostas às Perguntas de Avaliação</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { font-family: "Segoe UI", Arial, sans-serif; color: #23262B; background: #fff; }
+  body { font-size: 11.2pt; line-height: 1.55; }
+
+  /* ===== CAPA ===== */
+  .capa {
+    height: 297mm; width: 210mm;
+    background: linear-gradient(160deg, #142647 0%, #1B325E 55%, #234a7d 100%);
+    color: #F4FAF5; padding: 30mm 22mm; display: flex; flex-direction: column; justify-content: space-between;
+    page-break-after: always;
+  }
+  .capa .marca { display: flex; align-items: center; gap: 14px; }
+  .capa .marca img { width: 64px; height: 64px; background: #fff; border-radius: 50%; padding: 6px; box-sizing: border-box; }
+  .capa .marca span { font-size: 20pt; font-weight: 800; letter-spacing: .5px; }
+  .capa h1 { font-size: 32pt; line-height: 1.1; font-weight: 800; margin-bottom: 10px; }
+  .capa .sub { font-size: 14pt; opacity: .85; max-width: 60ch; }
+  .capa .meta { font-size: 10.5pt; opacity: .75; border-top: 1px solid rgba(255,255,255,.25); padding-top: 14px; }
+
+  /* ===== CORPO ===== */
+  .pagina { padding: 16mm 18mm 14mm; }
+  h2.secao {
+    font-size: 15pt; color: #1B325E; font-weight: 800;
+    border-bottom: 3px solid #1B325E; padding-bottom: 5px; margin: 10mm 0 4mm;
+    page-break-after: avoid;
+  }
+  h2.secao:first-of-type { margin-top: 0; }
+  p { margin-bottom: 8px; text-align: justify; }
+
+  .resumo-intro { background: #F6F4EC; border-left: 5px solid #1B325E; padding: 10px 14px; border-radius: 0 8px 8px 0; margin-bottom: 6mm; page-break-inside: avoid; }
+
+  /* ===== TABELA RESUMO ===== */
+  table { width: 100%; border-collapse: collapse; font-size: 10pt; margin: 4px 0 6mm; page-break-inside: avoid; }
+  th { background: #1B325E; color: #fff; text-align: left; padding: 7px 9px; font-weight: 700; }
+  td { padding: 7px 9px; border-bottom: 1px solid #E4E1D5; vertical-align: top; }
+  tr:nth-child(even) td { background: #FAF9F4; }
+
+  /* ===== CARDS DAS PERGUNTAS ===== */
+  .card {
+    border: 1.5px solid #DFDCD0; border-radius: 10px; padding: 12px 14px;
+    margin-bottom: 6mm; page-break-inside: avoid; background: #fff;
+  }
+  .card.ok { border-left: 6px solid #2E7D4F; }
+  .card.parcial { border-left: 6px solid #C99700; }
+  .card .cab { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+  .card .num {
+    flex: none; width: 28px; height: 28px; border-radius: 50%; background: #1B325E; color: #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13pt;
+  }
+  .card .perg { font-weight: 700; font-size: 11.5pt; color: #142647; flex: 1; }
+  .badge {
+    flex: none; font-size: 8.5pt; font-weight: 800; border-radius: 999px; padding: 3px 11px; white-space: nowrap;
+  }
+  .badge.sim { background: #E4F0E6; color: #1C6B3E; border: 1px solid #BFD9C6; }
+  .badge.parcial { background: #FDF3D7; color: #8A6A00; border: 1px solid #EBD79A; }
+  .rotulo { font-weight: 700; color: #1B325E; }
+  .card ul { margin: 2px 0 8px 18px; }
+  .card li { margin-bottom: 4px; }
+  .evidencia { background: #F4FAF5; border: 1px dashed #B9CBE0; border-radius: 8px; padding: 7px 11px; font-size: 10pt; margin-top: 6px; }
+  .evidencia b { color: #1B325E; }
+  .lacuna { background: #FDF9EC; border: 1px solid #EBD79A; border-radius: 8px; padding: 7px 11px; font-size: 10pt; margin-top: 6px; }
+  .lacuna b { color: #8A6A00; }
+
+  .rodape { text-align: center; font-size: 8.5pt; color: #7A7E85; padding: 6mm 0 0; border-top: 1px solid #E4E1D5; margin-top: 6mm; page-break-inside: avoid; }
+  .conclusao { background: #1B325E; color: #F4FAF5; border-radius: 10px; padding: 14px 18px; margin-top: 5mm; page-break-inside: avoid; }
+  .conclusao b { color: #9BE7C4; }
+</style>
+</head>
+<body>
+
+<!-- ================= CAPA ================= -->
+<section class="capa">
+  <div class="marca">
+    <img src="logo.svg" alt="">
+    <span>FIO TRACK</span>
+  </div>
+  <div>
+    <h1>Respostas às Perguntas<br>de Avaliação</h1>
+    <p class="sub">Documento técnico que indica, pergunta por pergunta, o que a solução tecnológica FioTrack já responde — com as evidências localizadas no próprio site — e o que ainda pode ser aprimorado.</p>
+  </div>
+  <div class="meta">
+    Projeto FioTrack — Doe seu cabelo, limpe o oceano<br>
+    Solução tecnológica para gestão de doação de cabelos e pelos → bóias de filtro de óleo<br>
+    Documento de avaliação · 2026
+  </div>
+</section>
+
+<!-- ================= PÁGINA 1 ================= -->
+<section class="pagina">
+  <h2 class="secao">Visão geral da solução</h2>
+  <div class="resumo-intro">
+    O <b>FioTrack</b> é uma plataforma web completa (landing page pública + aplicativo com dois perfis, <b>Parceiro</b> e <b>Gestor</b>) que organiza toda a jornada de uma iniciativa ambiental: <b>cadastro público de parceiros</b> (salões, barbearias e pet shops) com aprovação, <b>solicitações de coleta</b>, operação logística (coleta → pesagem e lote → triagem → estoque → destinação), <b>rastreabilidade</b> por código único de lote e <b>indicadores</b> ambientais, logísticos e de qualidade. O projeto inclui ainda materiais de apoio: fluxograma do processo (`.mmd` e `.md`), guia de uso para leigos e uma imagem 16:9 pronta para slides.
+  </div>
+
+  <h2 class="secao">Quadro-resumo das 9 perguntas</h2>
+  <table>
+    <tr><th style="width:5%">#</th><th>Pergunta de avaliação</th><th style="width:16%">Situação</th></tr>
+    <tr><td>1</td><td>O problema social está claramente definido e fundamentado na investigação?</td><td><b>⚠️ Parcial</b> — tema claro, faltam dados/fontes</td></tr>
+    <tr><td>2</td><td>A comunidade e o território foram caracterizados?</td><td><b>⚠️ Parcial</b> — implícito, não declarado</td></tr>
+    <tr><td>3</td><td>As necessidades dos possíveis usuários foram identificadas?</td><td><b>✅ Sim</b></td></tr>
+    <tr><td>4</td><td>A mediação prevê diálogo e participação, em vez de solução pronta?</td><td><b>✅ Sim</b></td></tr>
+    <tr><td>5</td><td>A intervenção possui objetivo, etapas e resultados esperados?</td><td><b>✅ Sim</b></td></tr>
+    <tr><td>6</td><td>A inovação tecnológica tem relação direta com o problema?</td><td><b>✅ Sim</b></td></tr>
+    <tr><td>7</td><td>Existe uma entrega tecnológica concreta e demonstrável?</td><td><b>✅ Sim</b></td></tr>
+    <tr><td>8</td><td>Considera acessibilidade, privacidade, segurança e condições reais de uso?</td><td><b>⚠️ Parcial</b> — acessibilidade ✅, privacidade a declarar</td></tr>
+    <tr><td>9</td><td>Há forma de avaliar resultados e planejar continuidade/melhoria?</td><td><b>⚠️ Parcial</b> — indicadores ✅, avaliação da iniciativa a formalizar</td></tr>
+  </table>
+
+  <p><b>Síntese:</b> das 9 perguntas, <b>5 são atendidas integralmente</b> pela solução e <b>4 são parciais</b> — e nessas 4 o que falta é essencialmente <b>documentação e narrativa</b> (seções de texto no site e no material de apresentação), não desenvolvimento tecnológico. Os itens 3, 4, 5, 6 e 7 — que avaliam a entrega em si — estão todos respondidos.</p>
+
+  <div class="rodape">FioTrack — Respostas às Perguntas de Avaliação</div>
+</section>
+
+<!-- ================= PERGUNTAS 1 a 3 ================= -->
+<section class="pagina fim">
+  <h2 class="secao">Perguntas 1 a 3 — Fundamento social, território e usuários</h2>
+
+  <div class="card parcial">
+    <div class="cab">
+      <span class="num">1</span>
+      <span class="perg">O problema social está claramente definido e fundamentado na investigação?</span>
+      <span class="badge parcial">PARCIAL</span>
+    </div>
+    <p><span class="rotulo">O que o site responde:</span> a landing page apresenta o problema de forma clara e imediata — descarte de cabelos e pelos de animais que poderiam virar <b>bóias de filtro para remoção de óleo no mar</b>, com chamada principal (“Já pensou em se tornar parceiro para limpar o oceano?”) e seção de notícias ambientais com links para veículos e organizações do setor (Instituto Socioambiental, Fundação Grupo Boticário, Cabelegria, SurfGuru).</p>
+    <div class="evidencia"><b>Onde ver:</b> landing page — hero de 2 slides (mar/baleia) e seção “Notícias” (<code>index.html</code>, âncora <code>#noticias</code>).</div>
+    <div class="lacuna"><b>Lacuna a fechar:</b> falta uma seção “O problema” com <b>números e fontes citadas</b> (ex.: quanto cabelo vira resíduo por ano, custo de limpeza de derramamento de óleo, dados oficiais), para fundamentar a investigação em vez de apenas ilustrá-la.</div>
+  </div>
+
+  <div class="card parcial">
+    <div class="cab">
+      <span class="num">2</span>
+      <span class="perg">A comunidade e o território foram caracterizados?</span>
+      <span class="badge parcial">PARCIAL</span>
+    </div>
+    <p><span class="rotulo">O que o site responde:</span> a comunidade está <b>materializada no sistema</b>: os parceiros são estabelecimentos locais (salões, barbearias e pet shops), a operação é feita por um gestor da ONG e a destinação do material aponta para organizações parceiras (ex.: ONG FioTrar). Todo o fluxo — do cadastro à destinação — descreve uma rede comunitária de doação.</p>
+    <div class="evidencia"><b>Onde ver:</b> telas “Parceiros” e “Aprovações” do painel do gestor; “Destinação” com destinatários reais; links do rodapé para Instagram da FioTrar.</div>
+    <div class="lacuna"><b>Lacuna a fechar:</b> o site <b>não declara explicitamente o território</b> (cidade, bairro ou trecho de litoral atendido) nem caracteriza a comunidade em texto (quantos estabelecimentos, perfil socioeconômico, por que ali). Recomenda-se um parágrafo “Nossa comunidade e nosso território”.</div>
+  </div>
+
+  <div class="card ok">
+    <div class="cab">
+      <span class="num">3</span>
+      <span class="perg">As necessidades dos possíveis usuários foram identificadas?</span>
+      <span class="badge sim">SIM</span>
+    </div>
+    <p><span class="rotulo">O que o site responde:</span> cada tela existe por uma necessidade real e identificável de um usuário:</p>
+    <ul>
+      <li><b>Parceiro (salão/barbearia/pet shop):</b> se cadastrar <b>sem precisar criar senha</b> (só preencher dados e e-mail); solicitar coleta em poucos campos; acompanhar “Minhas Solicitações” e “Contribuições”; rastrear o material doado; enxergar <b>apenas as próprias</b> informações.</li>
+      <li><b>Gestor (ONG):</b> aprovar/recusar cadastros com critério; receber a operação toda organizada em etapas; pesar e gerar lote automaticamente; triar com motivo obrigatório de rejeição; ver indicadores consolidados; editar cadastros sincronizando o login.</li>
+      <li><b>Visitante:</b> entender o projeto e se candidatar em 1 minuto, sem login.</li>
+    </ul>
+    <p>As simplificações feitas ao longo do desenvolvimento (remoção do perfil operador, ocultação do campo “Parceiro” para quem já está logado, filtro de parceiros aprovados) são prova de que as necessidades foram <b>escutadas e atendidas</b>, não apenas imaginadas.</p>
+    <div class="evidencia"><b>Onde ver:</b> login com 1 campo extra no máximo; “Nova Solicitação de Coleta”; “Minhas Solicitações”; guarda de rotas que impede um parceiro de ver dados de outro.</div>
+  </div>
+
+  <div class="rodape">FioTrack — Respostas às Perguntas de Avaliação</div>
+</section>
+
+<!-- ================= PERGUNTAS 4 a 6 ================= -->
+<section class="pagina fim">
+  <h2 class="secao">Perguntas 4 a 6 — Mediação, intervenção e inovação</h2>
+
+  <div class="card ok">
+    <div class="cab">
+      <span class="num">4</span>
+      <span class="perg">A mediação prevê diálogo e participação, em vez de apenas apresentar uma solução pronta?</span>
+      <span class="badge sim">SIM</span>
+    </div>
+    <p><span class="rotulo">O que o site responde:</span> o sistema é <b>participativo por natureza</b> — a iniciativa só acontece se a comunidade entrar nela:</p>
+    <ul>
+      <li>O parceiro <b>se candidata espontaneamente</b> (cadastro público) e pode reenviar o pedido caso recusado — há diálogo, não imposição.</li>
+      <li>O gestor <b>analisa e responde</b> cada cadastro: aprovar ou recusar, com confirmação e registro.</li>
+      <li>Na triagem, rejeitar material <b>exige informar o motivo</b> — a decisão é justificada e fica registrada.</li>
+      <li>A solicitação de coleta tem campo livre de <b>observações</b>; o cadastro tem dados de contato (telefone/e-mail) que abrem a comunicação fora do sistema.</li>
+      <li>O e-mail de aprovação é gerado com usuário e senha para o gestor <b>entregar ao parceiro</b> — um gesto de acolhimento na mediação.</li>
+    </ul>
+    <div class="evidencia"><b>Onde ver:</b> <code>#/cadastro-parceiro</code> (público) → <code>#/aprovacoes</code> (aprovar/recusar) → <code>#/emails</code> (comunicação) → <code>#/triagem</code> (motivo de rejeição).</div>
+  </div>
+
+  <div class="card ok">
+    <div class="cab">
+      <span class="num">5</span>
+      <span class="perg">A intervenção possui objetivo, etapas e resultados esperados?</span>
+      <span class="badge sim">SIM</span>
+    </div>
+    <p><span class="rotulo">O que o site responde:</span> a intervenção está formalizada em <b>materiais próprios do projeto</b> e é executável no sistema:</p>
+    <ul>
+      <li><b>Objetivo:</b> transformar cabelos e pelos descartados em matéria-prima para bóias de filtro, retirando esses resíduos do lixo e apoiando a remoção de óleo do mar.</li>
+      <li><b>Etapas (6):</b> cadastro e aprovação de parceiros → solicitação de coleta → coleta → pesagem e lote → triagem → estoque e destinação.</li>
+      <li><b>Resultados esperados:</b> kg desviados do lixo, lotes produzidos, nº de estabelecimentos parceiros ativos e material destinado a organizações parceiras — todos <b>mediáveis dentro do próprio sistema</b>.</li>
+    </ul>
+    <div class="evidencia"><b>Onde ver:</b> <code>Fluxograma_FioTrack.md/.mmd</code> e <code>Fluxograma_FioTrack.png</code> (diagrama completo), <code>Guia_de_Usudo_FioTrack.md</code> (manual passo a passo) e as telas do app, que executam exatamente essas etapas.</div>
+  </div>
+
+  <div class="card ok">
+    <div class="cab">
+      <span class="num">6</span>
+      <span class="perg">A inovação tecnológica apresenta uma relação direta com o problema?</span>
+      <span class="badge sim">SIM</span>
+    </div>
+    <p><span class="rotulo">O que o site responde:</span> a tecnologia não é enfeite — ela resolve os pontos em que a iniciativa falharia sem ela:</p>
+    <ul>
+      <li><b>Rastreabilidade com código único</b> (<code>FT-2026-000001</code>): resolve o problema central de <b>comprovar a origem e o destino</b> de cada quilo doado — do salão até a destinação final — com linha do tempo completa. É o que permite à iniciativa <b>provar</b> seu impacto ambiental.</li>
+      <li><b>Cadastro público + aprovação + credencial gerada automaticamente:</b> reduz a barreira de entrada dos estabelecimentos (o elo mais frágil do problema é a adesão).</li>
+      <li><b>Indicadores automáticos:</b> convertem a operação em resultado ambiental comunicável (kg desviados, aproveitamento, lotes).</li>
+      <li><b>Controle de qualidade (triagem):</b> garante que só material aproveitável siga adiante — qualidade do problema é tratado como dado.</li>
+    </ul>
+    <div class="evidencia"><b>Onde ver:</b> telas “Rastrear” (busca por código e linha do tempo), “Indicadores” e “Pesagem &amp; Lote”.</div>
+  </div>
+
+  <div class="rodape">FioTrack — Respostas às Perguntas de Avaliação</div>
+</section>
+
+<!-- ================= PERGUNTAS 7 a 9 ================= -->
+<section class="pagina fim">
+  <h2 class="secao">Perguntas 7 a 9 — Entrega, qualidade e continuidade</h2>
+
+  <div class="card ok">
+    <div class="cab">
+      <span class="num">7</span>
+      <span class="perg">Existe uma entrega tecnológica concreta e demonstrável?</span>
+      <span class="badge sim">SIM — ponto mais forte</span>
+    </div>
+    <p><span class="rotulo">O que o site responde:</span> a entrega é <b>integral e executável</b> — não é mockup: funciona de verdade no navegador, sem instalação.</p>
+    <ul>
+      <li><b>16 telas navegáveis</b> (verificadas automaticamente por rotina de captura, 16/16 aprovadas): login, cadastro público, painéis de parceiro e de gestor, operação completa e indicadores.</li>
+      <li><b>Funcionalidades reais:</b> validação de formulários com bloqueio de duplicidade (e-mail/documento), aprovação que cria conta e gera senha forte de 14 caracteres, caixa de e-mails simulada, geração automática de código de lote, persistência de dados no navegador.</li>
+      <li><b>Demonstração guiada em 5 minutos</b> já roteirizada no guia de uso — pronta para apresentação de banca.</li>
+      <li><b>Qualidade técnica:</b> código verificado por rotinas automáticas (<code>verify_dom.js</code>, <code>verify_landing_dom.js</code>, captura de 16 telas) — todas aprovadas.</li>
+    </ul>
+    <div class="evidencia"><b>Onde ver:</b> pasta do projeto — <code>index.html</code> (landing), <code>fiotrack-app/</code> (aplicativo), capturas em <code>wireframes/screenshots/</code>.</div>
+  </div>
+
+  <div class="card parcial">
+    <div class="cab">
+      <span class="num">8</span>
+      <span class="perg">A proposta considera acessibilidade, privacidade, segurança e condições reais de uso?</span>
+      <span class="badge parcial">PARCIAL</span>
+    </div>
+    <p><span class="rotulo">O que o site já responde:</span></p>
+    <ul>
+      <li><b>Acessibilidade — atendida:</b> link “Pular para o conteúdo”, rótulos e <code>aria-label</code> em todo o site, navegação por teclado, respeito a <code>prefers-reduced-motion</code> (reduce movimento), alvos de toque de 44px, layout responsivo com barra de abas no mobile e contraste elevado.</li>
+      <li><b>Privacidade — parcialmente atendida:</b> os dados <b>não saem do navegador</b> (não há servidor, banco de dados nuvem nem compartilhamento com terceiros); cada parceiro enxerga apenas os próprios registros; senhas fortes são geradas no ato da aprovação.</li>
+      <li><b>Segurança/condições reais — declarada:</b> é um <b>protótipo funcional</b>: e-mails são simulados em tela e a sessão é local. O projeto declara esses limites no guia de uso.</li>
+    </ul>
+    <div class="evidencia"><b>Onde ver:</b> comportamento acessível no código (skip-link, ARIA, media queries), aviso de dados no <code>Guia_de_Usudo_FioTrack.md</code>.</div>
+    <div class="lacuna"><b>Lacuna a fechar:</b> escrever no site (rodapé ou página “Sobre”) um <b>texto de privacidade/LGPD simplificado</b>, explicando dados locais, ausência de compartilhamento, e o plano de uso real (servidor, senha forte para o gestor, envio real de e-mail).</div>
+  </div>
+
+  <div class="card parcial">
+    <div class="cab">
+      <span class="num">9</span>
+      <span class="perg">Há uma forma de avaliar os resultados e planejar a continuidade ou a melhoria da iniciativa?</span>
+      <span class="badge parcial">PARCIAL</span>
+    </div>
+    <p><span class="rotulo">O que o site responde:</span> o sistema <b>já mede a operação</b> e dispõe das bases para medir a própria iniciativa:</p>
+    <ul>
+      <li><b>Indicadores da operação (prontos):</b> blocos logísticos (coletas realizadas/pendentes, peso), <b>ambientais</b> (kg desviados do lixo, material reaproveitado) e de qualidade (aproveitamento, rejeições) — com números consolidados na tela <code>#/indicadores</code>.</li>
+      <li><b>Indicadores da iniciativa (dados já coletados):</b> o painel reúne nº de cadastros, pendentes/aprovados/recusados (<code>#/aprovacoes</code>) e a lista de parceiros ativos (<code>#/parceiros</code>) — dá para calcular taxa de adesão e de aprovação hoje mesmo.</li>
+      <li><b>Ciclo de melhoria:</b> edição de cadastros pelo gestor mostra que o sistema corrige e evolui com o uso.</li>
+    </ul>
+    <div class="evidencia"><b>Onde ver:</b> <code>#/indicadores</code>, <code>#/aprovacoes</code>, <code>#/parceiros</code>.</div>
+    <div class="lacuna"><b>Lacuna a fechar:</b> criar uma seção “<b>Avaliação e próximos passos</b>” com (a) 2–3 métricas de sucesso da iniciativa (ex.: nº de salões ativos, kg/mês, taxa de recusa) e (b) roadmap explícito — servidor de e-mail real, armazenamento seguro e conformidade LGPD, aplicativo móvel e expansão territorial.</div>
+  </div>
+
+  <div class="rodape">FioTrack — Respostas às Perguntas de Avaliação</div>
+</section>
+
+<!-- ================= CONCLUSÃO ================= -->
+<section class="pagina fim">
+  <h2 class="secao">Conclusão e plano de ação sugerido</h2>
+  <p>A solução tecnológica FioTrack <b>responde integralmente 5 das 9 perguntas</b> (itens 3, 4, 5, 6 e 7) e responde <b>parcialmente as demais 4</b> (itens 1, 2, 8 e 9). Em nenhuma das nove a resposta é negativa: não há pergunta sem relação com o projeto.</p>
+  <p>O padrão das lacunas é claro: <b>o que falta não é programação, é texto</b>. A entrega tecnológica está pronta e demonstrável; o que pode ser acrescentado são quatro blocos de conteúdo, todos de baixo esforço:</p>
+
+  <table>
+    <tr><th style="width:6%">#</th><th>Ação recomendada</th><th style="width:22%">Onde</th><th style="width:14%">Esforço</th></tr>
+    <tr><td>1</td><td>Seção “O problema” com dados e fontes citadas (fundamentação da investigação)</td><td>Landing page</td><td>Baixo</td></tr>
+    <tr><td>2</td><td>Parágrafo “Nossa comunidade e território” (cidade/litoral atendido, nº de estabelecimentos)</td><td>Landing page</td><td>Baixo</td></tr>
+    <tr><td>3</td><td>Texto de privacidade/segurança simplificado + declaração de protótipo</td><td>Rodapé ou página “Sobre”</td><td>Baixo</td></tr>
+    <tr><td>4</td><td>Seção “Avaliação e próximos passos”: métricas da iniciativa + roadmap</td><td>Site + material de apresentação</td><td>Médio</td></tr>
+  </table>
+
+  <div class="conclusao">
+    <p style="color:#F4FAF5; margin-bottom:6px;"><b style="color:#9BE7C4;">Veredito final:</b> o FioTrack é uma <b>entrega tecnológica concreta, demonstrável e diretamente ligada ao problema social</b> — com participação real da comunidade, etapas claras, rastreabilidade que comprova o impacto e indicadores de resultado. Com os quatro acréscimos textuais acima, a proposta passa a responder <b>integralmente</b> aos nove critérios de avaliação.</p>
+  </div>
+
+  <div class="rodape">FioTrack — Respostas às Perguntas de Avaliação · documento gerado para fins de avaliação do projeto</div>
+</section>
+
+</body>
+</html>

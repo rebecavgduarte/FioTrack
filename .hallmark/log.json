@@ -1,0 +1,45 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "app",
+  "theme": "dose",
+  "genre": "modern-minimal",
+  "prompt": "an operational tool for a reverse-logistics network: partners request collections, operators weigh and track batches, managers read indicators",
+  "target": "fiotrack-app/index.html",
+  "nav": "mobile-first: sticky masthead with hamburger plus a fixed bottom tab bar (safe-area inset) under 64rem, persistent ink-green sidebar with accent-bright active fill from 64rem up",
+  "signature": "ink-green chrome over the Dose palette: borderless rule-separated sections instead of cards, KPI tiles tinted by signal (two-up on the phone, spanning the last odd tile), tables that stack into labelled cards under 48rem and return to a hairline index above it, queue rows with the action right-aligned and a middot meta join, bar and progress figures with the value outside the track, fluid clamp type on poster and figures, login split into poster and form from 56rem, a skip link plus focus-managed drawer (inert background, Esc and focus return) and every form submit pinned in a sticky bottom bar inside the thumb zone",
+  "dropped": [
+   "the tinted sidebar band and moulded active pill, replaced by a solid ink drawer with a filled active row",
+   "card grid and boxed panels, replaced by rule-separated sections and hairline lists",
+   "spreadsheet KPI grids and horizontally scrolling tables on the phone, replaced by tinted stat tiles and card rows rebuilt from data-label cells",
+   "the login passport ledger of lot codes and sample stats, leaving only the poster wordmark and the form",
+   "fixed px type steps on poster and figure roles, replaced by fluid clamp tokens",
+   "ISO dates in the UI: every display path renders dd/mm/yyyy HH:MM while storage keeps the ISO stamp YYYY-MM-DDTHH:MM",
+   "labels detached from their fields and required asterisks read aloud, replaced by for-associated labels, a radiogroup with an accessible name and an aria-hidden required marker",
+   "primary submits stranded at the end of the scroll, replaced by a sticky action bar in the bottom thumb zone (static again from 64rem)"
+  ],
+  "delta": "vs the Dose entry below: same palette, faces and passport stamp, different composition - the shell was rebuilt mobile-first (masthead, tab bar, scrim drawer, desktop sidebar from 64rem), the login became a split poster/form, queue rows and tables were reduced to hairline lists with ghost actions; this pass also enforces profile permissions (parceiro cannot reach /cadastro, /estoque, /operador, /indicadores or /pesagem, and sees only its own solicitacoes and lotes), stamps every record with date and hour (a Hora field beside each Data field, stored as YYYY-MM-DDTHH:MM, an existing database migrated on load) and renders it all as dd/mm/yyyy HH:MM in pt-BR, and removes the login passport panel; this last pass rebuilds every dashboard and list as an app layout - stat tiles instead of a bordered grid, tables that become labelled card rows under 48rem with no sideways scroll, queue rows with the action pinned right and a middot meta join, and bar/progress figures moved out of the fill so no value sits on a tint; the accessibility and reach pass that follows wires every field to its label (44 for-associated ids, role=radiogroup, role=alert errors, aria-current on the active route, aria-pressed on the demo pills), gives the shell a skip link, moves focus to main after each route change, lets the drawer close on Esc with the background inert and focus returned to its opener, drops the card-mode thead from the accessibility tree while cells keep data-label, measures all 23 colour pairs at 4.5:1 or better, keeps every interactive target at least 44px on the phone, pins each form's primary action in a sticky bar above the tab bar so the thumb never leaves the hot zone, and drops the Estoque screen's Destinar lotes shortcut whenever no batch has balance left, so a dry stock shows only the empty state",
+  "date": "2026-11-09"
+ },
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "app",
+  "theme": "dose",
+  "genre": "modern-minimal",
+  "prompt": "an operational tool for a reverse-logistics network: partners request collections, operators weigh and track batches, managers read indicators",
+  "target": "fiotrack-app/index.html",
+  "nav": "profile sidebar kept as the shell, tinted band, nine destinations collapsing to a menu under 60rem",
+  "signature": "the batch passport as a pharmacy label: protocolo and lote codes in DM Mono on every screen, rastreio rebuilt as stamped labels under a double-ruled passport stamp",
+  "dropped": [
+   "emoji wave logo, replaced by a drawn SVG mark (Floor 30a)",
+   "green gradient login flood, now warm paper with the passport band",
+   "flooded green sidebar, now a tinted plastic band with a moulded active pill",
+   "uppercase table heads and button labels (Floor 67)",
+   "em-dash and middle-dot copy joins (Floor 19, 63)",
+   "shadow elevation on dashboard cards, now hairline figure partitions"
+  ],
+  "date": "2026-11-06"
+ }
+]

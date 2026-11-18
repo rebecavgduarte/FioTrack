@@ -1,0 +1,167 @@
+subject,description,status,milestone,points,tags,client_requirements
+US01 - Cadastro de Parceiro,"**Como** parceiro, **quero** me cadastrar, **para** participar do programa de coleta.
+
+### Critérios de Aceitação
+- CA-01.1: Cadastro com dados válidos cria o parceiro e exibe sucesso
+- CA-01.2: Campos obrigatórios vazios impedem o envio
+- CA-01.3: E-mail inválido exibe erro de validação
+- CA-01.4: Documento duplicado exibe erro
+- CA-01.5: Tipos: Salão, Barbearia, Pet Shop, Banho e Tosa, Clinica Veterinaria, Pessoa Fisica, Outro
+
+### Tasks
+- Desenhar tela de cadastro (wireframe)
+- Definir campos do formulario
+- Implementar validacoes de campos obrigatorios
+- Implementar persistencia dos dados do parceiro
+- Testar fluxo completo de cadastro",New,Sprint 1 - Ideação e MVP Conceitual,3,cadastro;parceiro;US01,Must have
+US02 - Solicitação de Coleta,"**Como** parceiro, **quero** solicitar uma coleta, **para** enviar meu material.
+
+### Critérios de Aceitação
+- CA-02.1: Solicitacao valida gera protocolo com status Pendente
+- CA-02.2: Ponto de coleta e obrigatorio
+- CA-02.3: Tipos: Cabelo humano, Pelo de animal, Misto
+- CA-02.4: Listagem mostra todas as solicitacoes com status
+
+### Tasks
+- Desenhar tela de solicitacao de coleta (wireframe)
+- Definir modelo de dados da solicitacao
+- Implementar formulario de solicitacao
+- Implementar listagem de solicitacoes do parceiro
+- Testar fluxo de solicitacao",New,Sprint 1 - Ideação e MVP Conceitual,5,coleta;solicitacao;US02,Must have
+US03 - Visualização de Coletas Pendentes,"**Como** operador, **quero** visualizar coletas pendentes, **para** planejar minha rota.
+
+### Critérios de Aceitação
+- CA-03.1: Dashboard lista coletas pendentes por data
+- CA-03.2: Sem coletas exibe mensagem adequada
+- CA-03.3: Filtro por regiao funciona
+- CA-03.4: Detalhes mostram parceiro, endereco, material, data
+
+### Tasks
+- Desenhar tela de dashboard do operador (wireframe)
+- Implementar listagem de coletas pendentes
+- Implementar filtros por regiao/status
+- Implementar ordenacao por data/prioridade
+- Testar visualizacao",New,Sprint 1 - Ideação e MVP Conceitual,5,operador;dashboard;US03,Must have
+US04 - Registro de Coleta,"**Como** operador, **quero** registrar uma coleta, **para** manter a rastreabilidade.
+
+### Critérios de Aceitação
+- CA-04.1: Registro muda status para Concluida
+- CA-04.2: Status: Pendente, Em Andamento, Concluida, Cancelada
+- CA-04.3: Responsavel e obrigatorio
+
+### Tasks
+- Desenhar tela de registro de coleta
+- Implementar formulario de registro (data, responsavel, ponto)
+- Implementar status da coleta
+- Testar fluxo de registro",New,Sprint 2 - Evolução do Produto,3,coleta;registro;US04,Must have
+US05 - Registro de Peso,"**Como** operador, **quero** registrar o peso coletado, **para** controlar o volume.
+
+### Critérios de Aceitação
+- CA-05.1: Peso valido e registrado e vinculado a coleta
+- CA-05.2: Peso zero/negativo exibe erro
+- CA-05.3: Formato nao numerico exibe erro
+- CA-05.4: Peso registrado aparece nos detalhes
+
+### Tasks
+- Desenhar tela de pesagem
+- Implementar formulario de peso
+- Implementar validacao de peso
+- Vincular peso a coleta correspondente
+- Testar fluxo de pesagem",New,Sprint 2 - Evolução do Produto,3,pesagem;peso;US05,Must have
+US06 - Geração de Lote,"**Como** operador, **quero** gerar um lote, **para** identificar o material.
+
+### Critérios de Aceitação
+- CA-06.1: Codigo unico auto-gerado FT-2026-000001, status Em Triagem
+- CA-06.2: Campos: Codigo (auto), Tipo Material, Peso Inicial, Data, Status
+- CA-06.3: Busca por codigo retorna dados do lote
+- CA-06.4: Codigo e garantido como unico
+
+### Tasks
+- Desenhar tela de criacao de lote
+- Implementar geracao automatica de codigo
+- Implementar campos do lote
+- Implementar status inicial do lote
+- Implementar consulta de lote por codigo
+- Testar fluxo completo de lote",New,Sprint 2 - Evolução do Produto,5,lote;rastreabilidade;US06,Must have
+US07 - Registro de Triagem,"**Como** operador, **quero** registrar a triagem, **para** separar materiais aprovados e rejeitados.
+
+### Critérios de Aceitação
+- CA-07.1: Triagem aprovada atualiza status do lote
+- CA-07.2: Validar soma: aprovado + rejeitado = peso inicial
+- CA-07.3: Motivo de rejeicao obrigatorio quando rejeitado > 0
+- CA-07.4: Motivos: Contaminado, Umidade Excessiva, Tipo Inadequado, Material Danificado, Outro
+- CA-07.5: Aproveitamento calculado automaticamente
+
+### Tasks
+- Desenhar tela de triagem
+- Implementar formulario de triagem
+- Implementar catalogo de motivos de rejeicao
+- Implementar calculo de aproveitamento
+- Vincular triagem ao lote
+- Testar fluxo de triagem",New,Sprint 3 - Consolidação,5,triagem;qualidade;US07,Must have
+US08 - Consulta de Estoque,"**Como** operador, **quero** consultar o estoque, **para** saber quanto material esta disponivel.
+
+### Critérios de Aceitação
+- CA-08.1: Lista lotes em estoque com codigo, tipo, peso, data
+- CA-08.2: Resumo: total de lotes, peso disponivel, peso por tipo
+- CA-08.3: Filtro por tipo funciona
+- CA-08.4: Estoque vazio exibe mensagem
+
+### Tasks
+- Desenhar tela de estoque
+- Implementar listagem de lotes em estoque
+- Implementar filtros
+- Implementar resumo de pesos
+- Testar consulta",New,Sprint 3 - Consolidação,5,estoque;US08,Should have
+US09 - Registro de Destinação,"**Como** operador, **quero** registrar a destinacao de um lote, **para** completar a rastreabilidade.
+
+### Critérios de Aceitação
+- CA-09.1: Destinacao registrada muda status para Destinado
+- CA-09.2: Destinacao parcial atualiza saldo
+- CA-09.3: Historico de movimentacoes completo
+
+### Tasks
+- Desenhar tela de destinacao
+- Implementar formulario de destinacao
+- Implementar atualizacao de status do lote
+- Implementar historico de movimentacoes
+- Testar fluxo de destinacao",New,Sprint 3 - Consolidação,5,destinacao;US09,Must have
+US10 - Rastreabilidade Completa,"**Como** gestor, **quero** rastrear um lote desde sua origem ate sua destinacao, **para** ter visibilidade total.
+
+### Critérios de Aceitação
+- CA-10.1: Busca por codigo retorna timeline completa
+- CA-10.2: Timeline: Origem > Coleta > Transporte > Recebimento > Triagem > Estoque > Destinacao
+- CA-10.3: Lote inexistente exibe mensagem de nao encontrado
+- CA-10.4: Etapa Origem mostra dados do parceiro
+
+### Tasks
+- Desenhar tela de rastreabilidade (timeline)
+- Implementar busca por codigo do lote
+- Implementar timeline completa (7 etapas)
+- Implementar exibicao de dados de cada etapa
+- Testar rastreabilidade completa",New,Sprint 3 - Consolidação,8,rastreabilidade;gestor;US10,Must have
+US11 - Indicadores,"**Como** gestor, **quero** visualizar indicadores, **para** acompanhar a operacao.
+
+### Critérios de Aceitação
+- CA-11.1: Indicadores logisticos (pontos, coletas, peso)
+- CA-11.2: Indicadores ambientais (kg desviados, lotes, destinacoes)
+- CA-11.3: Indicadores de qualidade (aprovado, rejeitado, motivos)
+- CA-11.4: Sem dados exibe mensagem adequada
+
+### Tasks
+- Desenhar dashboard de indicadores
+- Implementar indicadores logisticos
+- Implementar indicadores ambientais
+- Implementar indicadores de qualidade
+- Testar indicadores",New,Sprint 3 - Consolidação,5,indicadores;dashboard;US11,Should have
+US12 - Consulta de Contribuições do Parceiro,"**Como** parceiro, **quero** consultar minhas contribuicoes, **para** acompanhar minha participacao.
+
+### Critérios de Aceitação
+- CA-12.1: Historico de contribuicoes com data, peso, status
+- CA-12.2: Totalizacao: peso total, numero de coletas
+
+### Tasks
+- Desenhar tela de contribuicoes do parceiro
+- Implementar historico de coletas do parceiro
+- Implementar totalizacao
+- Testar consulta",New,Sprint 3 - Consolidação,3,parceiro;contribuicoes;US12,Could have

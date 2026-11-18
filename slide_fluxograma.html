@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1600px; height: 900px; overflow: hidden;
+    font-family: "Segoe UI", "Instrument Sans", Arial, sans-serif;
+    background: #F6F4EC; color: #23262B;
+    display: flex; flex-direction: column;
+  }
+  header {
+    background: #1B325E; color: #F4FAF5;
+    padding: 16px 48px 14px; display: flex; align-items: center; gap: 22px;
+  }
+  header img { height: 44px; }
+  header .tt h1 { font-size: 30px; font-weight: 800; letter-spacing: .5px; }
+  header .tt p { font-size: 16px; opacity: .85; margin-top: 3px; }
+  main { flex: 1; display: flex; gap: 34px; padding: 18px 48px 6px; }
+  .lane { flex: 1; display: flex; flex-direction: column; }
+  .lane-title {
+    font-size: 22px; font-weight: 800; color: #1B325E;
+    display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+  }
+  .lane-title .num {
+    width: 32px; height: 32px; border-radius: 50%; background: #1B325E; color: #fff;
+    display: flex; align-items: center; justify-content: center; font-size: 17px;
+  }
+  .steps { display: flex; flex-direction: column; align-items: stretch; }
+  .box {
+    background: #FFFFFF; border: 2px solid #DFDCD0; border-radius: 12px;
+    padding: 8px 16px; font-size: 17px; line-height: 1.28; position: relative;
+    box-shadow: 0 2px 0 rgba(27,50,94,.06);
+  }
+  .box b { color: #1B325E; }
+  .box .sub { display: block; font-size: 14px; color: #5C6067; margin-top: 2px; }
+  .arrow { text-align: center; color: #1B325E; font-size: 17px; line-height: 1; padding: 3px 0; font-weight: 700; }
+  .chip {
+    display: inline-block; font-size: 13px; font-weight: 700; border-radius: 999px;
+    padding: 1px 9px; margin-left: 6px; vertical-align: middle;
+  }
+  .chip.pend { background: #FDF3D7; color: #8A6A00; border: 1px solid #EBD79A; }
+  .chip.ok   { background: #E4F0E6; color: #1C396F; border: 1px solid #BFD9C6; }
+  .chip.mail { background: #E8EDF7; color: #1B325E; border: 1px solid #C4D0E6; }
+  .bridge {
+    background: #1B325E; color: #F4FAF5; border-radius: 12px;
+    padding: 10px 16px; font-size: 16.5px; text-align: center; font-weight: 600;
+    margin-bottom: 10px; line-height: 1.3;
+  }
+  .highlight { border-color: #1B325E; background: #F4FAF5; }
+  footer {
+    display: flex; gap: 26px; align-items: center; justify-content: center;
+    padding: 10px 48px 14px; font-size: 15.5px; color: #44474D;
+    border-top: 2px solid #E4E1D5; margin-top: 6px;
+  }
+  footer b { color: #1B325E; }
+  .who { display: flex; align-items: center; gap: 8px; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; }
+</style>
+</head>
+<body>
+  <header>
+    <img src="logo.svg" alt="">
+    <div class="tt">
+      <h1>Fluxo FioTrack — do cadastro à destinação</h1>
+      <p>Como um salão/barbearia/pet shop se torna parceiro e como o material percorre toda a operação</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== COLUNA 1 ===== -->
+    <section class="lane">
+      <div class="lane-title"><span class="num">1</span> Cadastro &amp; Aprovação de parceiros</div>
+      <div class="steps">
+        <div class="box"><b>Página inicial (landing)</b><span class="sub">Visitante clica em “Quero me tornar parceiro”</span></div>
+        <div class="arrow">▼</div>
+        <div class="box"><b>Cadastro público</b><span class="sub">E-mail obrigatório = futuro usuário · bloqueia duplicidade</span></div>
+        <div class="arrow">▼</div>
+        <div class="box">Cadastro enviado <span class="chip pend">PENDENTE</span><span class="sub">“Aguarde a análise da equipe”</span></div>
+        <div class="arrow">▼</div>
+        <div class="box"><b>Gestor analisa no painel</b> — menu <b>Aprovações</b><span class="sub">Aprovar ✓ ou Recusar ✗ (com confirmação)</span></div>
+        <div class="arrow">▼</div>
+        <div class="box highlight">Conta criada na hora <span class="chip ok">SENHA FORTE</span><span class="sub">Usuário = e-mail + senha aleatória gerada pelo sistema</span></div>
+        <div class="arrow">▼</div>
+        <div class="box">E-mail de boas-vindas pronto <span class="chip mail">tela E-mails</span><span class="sub">Gestor copia e envia ao parceiro</span></div>
+        <div class="arrow">▼</div>
+        <div class="box highlight"><b>🎉 Parceiro faz login</b><span class="sub">Seu painel é liberado — vê só as próprias coisas</span></div>
+      </div>
+    </section>
+
+    <!-- ===== COLUNA 2 ===== -->
+    <section class="lane">
+      <div class="lane-title"><span class="num">2</span> Operação &amp; Rastreabilidade</div>
+      <div class="bridge">Parceiro envia um pedido:<br/>“Nova Solicitação de Coleta” (material, quantidade, data)</div>
+      <div class="steps">
+        <div class="box">Pedido na fila <span class="chip pend">PENDENTE</span></div>
+        <div class="arrow">▼</div>
+        <div class="box"><b>Gestor registra a COLETA</b><span class="sub">Quem buscou · data · peso coletado</span></div>
+        <div class="arrow">▼</div>
+        <div class="box"><b>Pesagem &amp; Lote</b><span class="sub">Código automático: FT-2026-000001</span></div>
+        <div class="arrow">▼</div>
+        <div class="box"><b>Triagem</b> — qualidade do material<span class="sub">Aprovado × Rejeitado (rejeição exige motivo)</span></div>
+        <div class="arrow">▼</div>
+        <div class="box"><b>Estoque</b> disponível<span class="sub">Quanto material está pronto para sair</span></div>
+        <div class="arrow">▼</div>
+        <div class="box"><b>Destinação</b> — ex.: ONG FioTrar<span class="sub">Registrado para onde o material foi</span></div>
+        <div class="arrow">▼</div>
+        <div class="box highlight"><b>Rastreabilidade + Indicadores</b><span class="sub">Linha do tempo completa e números gerais da operação</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="who"><span class="dot" style="background:#1B325E"></span><b>Parceiro:</b>&nbsp;cuida só das próprias doações</span>
+    <span class="who"><span class="dot" style="background:#B3261E"></span><b>Gestor:</b>&nbsp;aprova, opera e acompanha tudo</span>
+    <span class="who">Dados salvos no navegador · e-mails ficam prontos na tela <b>E-mails</b> para copiar</span>
+  </footer>
+</body>
+</html>

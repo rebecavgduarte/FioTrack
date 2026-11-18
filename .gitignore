@@ -1,0 +1,11 @@
+# Dependências (regenerar com npm install)
+node_modules/
+
+# Artefatos temporários de teste/renderização
+_tmp_*.pdf
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,49 @@
+:root {
+  color-scheme: light;
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --text-xs: 0.75rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.2rem; --text-xl: 1.44rem; --text-2xl: 1.728rem; --text-3xl: 2.074rem;
+  --text-display-s: 1.44rem; --text-display: 1.728rem; --text-section: 1.2rem; --text-title: 1rem; --text-lead: 1rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+  --color-error: oklch(52% 0.19 27);
+  --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+  --color-paper: oklch(97.6% 0.011 88); --color-paper-2: oklch(96.5% 0.02 160); --color-paper-3: oklch(93% 0.036 160);
+  --color-ink: oklch(18.132% 0.02277 260.429); --color-ink-2: oklch(28.273% 0.02072 273.069); --color-muted: oklch(49% 0.024 165);
+  --color-rule: oklch(86.5% 0.022 140);
+  /* brand: FioTrack green (#1B5E20) kept as the accent coordinates */
+  --color-accent: #1b325e; --color-accent-deep: #142647; --color-accent-soft: #E4F0E6; --color-accent-ink: #F4FAF5;
+  --color-focus: #1b395e;
+  /* surfaces: warm paper, moulded plastic */
+  --color-surface: oklch(99.4% 0.004 90); --color-surface-2: oklch(97.9% 0.01 90);
+  /* status tones: one bg + ink pair per state, all measured on their own bg */
+  --tone-ok-bg: #E4F0E6; --tone-ok-ink: #1c396f;
+  --tone-warn-bg: #FBEFE0; --tone-warn-ink: #8A5300;
+  --tone-error-bg: #FAE7E4; --tone-error-ink: #B3261E;
+  --tone-neutral-bg: #ECEFEA; --tone-neutral-ink: #3A3F3A;
+  --color-error: #B3261E; --color-success: #1b385e;
+  /* ink chrome: the drawer, the login poster, anything that sits on the dark */
+  --color-ink-deep: oklch(11.311% 0.04529 272.061); --color-ink-deep-2: oklch(24% 0.034 170);
+  --color-on-ink: oklch(93.5% 0.018 165); --color-on-ink-muted: oklch(74% 0.028 165);
+  --color-ink-hair: oklch(97% 0.006 165 / 0.16); --color-ink-veil: oklch(100% 0 0 / 0.09);
+  --color-scrim: oklch(21% 0.025 170 / 0.55);
+  --color-accent-bright: oklch(56.72% 0.12524 267.463);
+  /* fluid display: the small screen sets the floor, the wide screen grows it */
+  --text-poster: clamp(2.75rem, 9vw, 5.5rem);
+  --text-display-lg: clamp(1.9rem, 5vw, 2.9rem);
+  --text-display-md: clamp(1.4rem, 3.4vw, 1.9rem);
+  --text-figure: clamp(1.55rem, 4.2vw, 2rem);
+  --text-kpi: clamp(1.35rem, 4.6vw, 1.95rem);
+  /* shell */
+  --sidebar-w: 264px; --main-max: 1160px;
+  --appbar-h: 56px; --tabbar-h: 64px; --safe-b: env(safe-area-inset-bottom, 0px);
+  --p-mon: oklch(85% 0.052 22); --p-tue: oklch(87.5% 0.058 64); --p-wed: oklch(91.5% 0.064 98); --p-thu: oklch(86.5% 0.075 160);
+  --p-fri: oklch(87% 0.048 210); --p-sat: oklch(84% 0.045 270); --p-sun: oklch(84% 0.048 322);
+  --light: oklch(99.4% 0.016 84); --glint: oklch(100% 0 0);
+  --font-display: "Schibsted Grotesk", ui-sans-serif, sans-serif; --font-body: "Instrument Sans", ui-sans-serif, sans-serif;
+  --font-outlier: "DM Mono", ui-monospace, monospace;
+  --radius-card: 16px; --radius-input: 12px; --radius-pill: 999px; --rule-hair: 1px;
+  --shadow-card: 0 1px 2px oklch(25.199% 0.03586 281.175 / 0.08), 0 24px 48px -24px oklch(23.968% 0.11649 268.194 / 0.35);
+  --shadow-lift: 0 1px 1px oklch(25.045% 0.03756 285.631 / 0.1), 8px 18px 28px -14px oklch(25.312% 0.07796 274.326 / 0.32), 18px 40px 60px -30px oklch(22.793% 0.1243 269.529 / 0.3);
+  --tracking-display: -0.03em; --display-weight: 700;
+}

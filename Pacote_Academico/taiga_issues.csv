@@ -1,0 +1,55 @@
+subject,description,status,severity,priority,milestone,tags
+[R01] Quantidade insuficiente de material,"**Categoria:** Aceitação | **Prob:** Média | **Impacto:** Alto
+**Mitigação:** Criar rede inicial de parceiros (meta: 10+ pontos).
+**Status:** Fechado no Ciclo 3 (12+ pontos ativos).",In progress,High,High,Sprint 1 - Ideação e MVP Conceitual,risco;aceitacao;Ciclo1
+[R02] Material contaminado ou inadequado,"**Categoria:** Técnico | **Prob:** Alta | **Impacto:** Alto
+**Mitigação:** Critérios de aceitação e rejeição; treinamento de parceiros.
+**Status:** Fechado no Ciclo 2.",In progress,High,High,Sprint 1 - Ideação e MVP Conceitual,risco;tecnico;Ciclo1
+[R03] Custo de coleta inviabilizar a operação,"**Categoria:** Financeiro | **Prob:** Alta | **Impacto:** Alto
+**Mitigação:** Agrupar coletas por região; frequência mínima por ponto.
+**Status:** Parcialmente mitigado — custo real medido pós-piloto.",In progress,High,High,Sprint 1 - Ideação e MVP Conceitual,risco;financeiro;Ciclo1
+[R04] Dificuldade para conseguir parceiros,"**Categoria:** Aceitação | **Prob:** Média | **Impacto:** Alto
+**Mitigação:** Programa de adesão com benefícios; abordagem direta.
+**Status:** Fechado no Ciclo 2.",Closed,Medium,High,Sprint 1 - Ideação e MVP Conceitual,risco;aceitacao;Ciclo1
+[R05] Sistema não representar a operação real,"**Categoria:** Técnico | **Prob:** Média | **Impacto:** Médio
+**Mitigação:** Validar fluxo com usuários nas Sprint Reviews.
+**Status:** Fechado no Ciclo 3.",Closed,Low,Medium,Sprint 1 - Ideação e MVP Conceitual,risco;tecnico;Ciclo1
+[R01-C2] Baixo volume coletado,"**Categoria:** Aceitação | **Prob:** Média | **Impacto:** Alto
+**Mitigação:** Ampliar rede de parceiros; campanha de arrecadação.
+**Status:** Em monitoramento.",In progress,High,High,Sprint 2 - Evolução do Produto,risco;aceitacao;Ciclo2
+[R02-C2] Custo logístico elevado,"**Categoria:** Financeiro | **Prob:** Alta | **Impacto:** Alto
+**Mitigação:** Otimização de rotas; agrupamento por bairro/região.
+**Status:** Mitigado.",In progress,High,High,Sprint 2 - Evolução do Produto,risco;financeiro;Ciclo2
+[R03-C2] Erro no registro do peso,"**Categoria:** Técnico | **Prob:** Média | **Impacto:** Médio
+**Mitigação:** Conferência dupla na entrada; validação de campos.
+**Status:** Mitigado.",In progress,Medium,Medium,Sprint 2 - Evolução do Produto,risco;tecnico;Ciclo2
+[R04-C2] Perda da identificação do lote,"**Categoria:** Técnico | **Prob:** Média | **Impacto:** Alto
+**Mitigação:** Código único FT-2026-XXXXXX + registro digital + etiqueta física.
+**Status:** Mitigado.",In progress,High,High,Sprint 2 - Evolução do Produto,risco;tecnico;lote;Ciclo2
+[R05-C2] Atraso no desenvolvimento,"**Categoria:** Cronograma | **Prob:** Média | **Impacto:** Médio
+**Mitigação:** Limitar escopo do MVP; priorizar Must Have.
+**Status:** Mitigado.",In progress,Medium,Medium,Sprint 2 - Evolução do Produto,risco;cronograma;Ciclo2
+[R06-C2] Extravio de material na operação,"**Categoria:** Técnico | **Prob:** Baixa | **Impacto:** Alto
+**Mitigação:** Registro de handover (transferência de responsabilidade).
+**Status:** Mitigado.",In progress,Low,High,Sprint 2 - Evolução do Produto,risco;tecnico;Ciclo2
+[R01-C3] Escalabilidade da operação,"**Categoria:** Técnico | **Prob:** Média | **Impacto:** Alto
+**Mitigação:** Arquitetura modular do sistema.
+**Status:** Mitigado.",In progress,High,High,Sprint 3 - Consolidação,risco;tecnico;escalabilidade;Ciclo3
+[R02-C3] Custo por kg transportado elevado,"**Categoria:** Financeiro | **Prob:** Média | **Impacto:** Alto
+**Mitigação:** Roteirização otimizada; parcerias de transporte.
+**Status:** Em monitoramento.",In progress,High,High,Sprint 3 - Consolidação,risco;financeiro;Ciclo3
+[R03-C3] Falta de padronização dos parceiros,"**Categoria:** Aceitação | **Prob:** Média | **Impacto:** Médio
+**Mitigação:** Manual operacional; treinamento inicial.
+**Status:** Mitigado.",In progress,Medium,Medium,Sprint 3 - Consolidação,risco;aceitacao;Ciclo3
+[R04-C3] Crescimento superior à capacidade logística,"**Categoria:** Cronograma | **Prob:** Média | **Impacto:** Alto
+**Mitigação:** Limitação territorial inicial (Maricá); crescimento gradual.
+**Status:** Mitigado.",In progress,High,High,Sprint 3 - Consolidação,risco;cronograma;Ciclo3
+[R05-C3] VALIDAÇÃO TÉCNICA DO USO DO MATERIAL (ABERTO),"**Categoria:** Técnico | **Prob:** Alta | **Impacto:** Alto
+**Mitigação:** Parcerias técnicas (universidades, especialistas); testes controlados.
+**Status:** ⚠️ ABERTO — depende de parceiros externos. Risco mais crítico do projeto.",In progress,High,High,Sprint 3 - Consolidação,risco;tecnico;CRITICO;ABERTO;Ciclo3
+[R06-C3] Dependência de centro único de preparação,"**Categoria:** Técnico | **Prob:** Baixa | **Impacto:** Alto
+**Mitigação:** Estudar centros regionais futuros.
+**Status:** Monitorado.",In progress,Low,High,Sprint 3 - Consolidação,risco;tecnico;Ciclo3
+[R07-C3] Resistência de novos parceiros,"**Categoria:** Aceitação | **Prob:** Média | **Impacto:** Médio
+**Mitigação:** Cases de sucesso; certificados; dashboard de impacto.
+**Status:** Mitigado.",In progress,Medium,Medium,Sprint 3 - Consolidação,risco;aceitacao;Ciclo3
